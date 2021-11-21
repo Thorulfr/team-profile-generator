@@ -1,0 +1,31 @@
+{
+  "name": "team-profile-generator",
+  "version": "1.0.0",
+  "description": "This application uses user input to create a webpage that displays summaries for each individual on a software engineering team.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Thorulfr/team-profile-generator.git"
+  },
+  "keywords": [
+    "generator",
+    "jest",
+    "unit",
+    "tests"
+  ],
+  "author": "Benjamin Holt",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Thorulfr/team-profile-generator/issues"
+  },
+  "homepage": "https://github.com/Thorulfr/team-profile-generator#readme",
+  "dependencies": {
+    "inquirer": "^8.2.0"
+  },
+  "devDependencies": {
+    "jest": "^27.3.1"
+  }
+}
