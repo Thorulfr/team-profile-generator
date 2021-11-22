@@ -24,9 +24,9 @@ const generateEmployeeCard = (employeeObject) => {
 };
 
 module.exports = (employeeArray) => {
-    let employeeCardsArray = [];
+    let employeeInfoArray = [];
     for (let i = 0; i < employeeArray.length; i++) {
-        employeeCardsArray += generateEmployeeCard(employeeArray[i]);
+        employeeInfoArray += generateEmployeeCard(employeeArray[i]);
     }
 
     return `
@@ -43,7 +43,7 @@ module.exports = (employeeArray) => {
                     <h1 class="title">My Team</h1>
                 </div>
                 <div>
-                        ${employeeCardsArray}
+                    ${employeeInfoArray}
                 </div>
             </body>
         </html>
