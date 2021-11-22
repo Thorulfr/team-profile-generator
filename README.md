@@ -48,9 +48,9 @@ THEN I exit the application, and the HTML is generated
 
 <https://github.com/Thorulfr/team-profile-generator>
 
-## Demonstration
+## Video Demonstration
 
-[See this app in action.](URL)
+[See this app in action.](https://youtu.be/A4fE3JvRFt4)
 
 ## Credits
 
