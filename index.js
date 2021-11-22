@@ -40,7 +40,6 @@ managerPrompt = () => {
                 managerData.managerOffice
             );
             employees.push(manager);
-            console.log(employees);
             return moreEmployeesPrompt();
         });
 };
@@ -77,7 +76,6 @@ engineerPrompt = () => {
                 engineerData.engineerGithub
             );
             employees.push(engineer);
-            console.log(employees);
             return moreEmployeesPrompt();
         });
 };
@@ -114,7 +112,6 @@ internPrompt = () => {
                 internData.internSchool
             );
             employees.push(intern);
-            console.log(employees);
             return moreEmployeesPrompt();
         });
 };
@@ -134,6 +131,7 @@ moreEmployeesPrompt = () => {
                 case 'Yes, an intern':
                     return internPrompt();
                 case "No, I'm finished":
+                    console.log(employees);
                     return employees;
             }
         });

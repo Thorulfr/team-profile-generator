@@ -1,4 +1,12 @@
 const generateEmployeeCard = (employeeObject) => {
+    console.log(employeeObject.constructor.name);
+    if (employeeObject.constructor.name === 'Manager') {
+        employeeObject.extraData = `Office Number: ${employeeObject.getOfficeNumber()}`;
+    } else if (employeeObject.constructor.name === 'Engineer') {
+        employeeObject.extraData = `<a href="https://github.com/${employeeObject.getGithub()}">Github</a>`;
+    } else {
+        employeeObject.extraData = `School: ${employeeObject.getSchool()}`;
+    }
     return `
         <div class="message is-primary m-5">
             <p class="is-flex message-header">${employeeObject.getName()}</p>
@@ -9,6 +17,7 @@ const generateEmployeeCard = (employeeObject) => {
                 <br>
                 Email: <a href='mailto:${employeeObject.getEmail()}'>${employeeObject.getEmail()}</a>
                 <br>
+                ${employeeObject.extraData}
             </div>
         </div>
         `;
