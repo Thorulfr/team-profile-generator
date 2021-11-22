@@ -1,22 +1,17 @@
 const generateEmployeeCard = (employeeObject) => {
     return `
-        <div class="card">
-            <div class="card-content">
-                <div class="media">
-                    <div class="media-content">
-                        <p class="title is-4">${employeeObject.getName()}</p>
-                        <p class="subtitle is-6">${employeeObject.getRole()}</p>
-                    </div>
-                </div>
-                <div class="content">
-                    Employee ID: ${employeeObject.getId()}
-                    <br>
-                    Employee Email: <a href='mailto:${employeeObject.getEmail()}'>${employeeObject.getEmail()}</a>
-                    <br>
-                </div>
+        <div class="message is-primary m-5">
+            <p class="is-flex message-header">${employeeObject.getName()}</p>
+            <div class="message-body">
+                ${employeeObject.getRole()}
+                <br>
+                ID: ${employeeObject.getId()}
+                <br>
+                Email: <a href='mailto:${employeeObject.getEmail()}'>${employeeObject.getEmail()}</a>
+                <br>
             </div>
         </div>
-    `;
+        `;
 };
 
 module.exports = (employeeArray) => {
@@ -34,10 +29,13 @@ module.exports = (employeeArray) => {
                 <title>Team Profile!</title>
                 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
             </head>
-            <body>
-                <section class="section">
-                    ${employeeCardsArray}
-                </section>
+            <body class="container is-max-desktop">
+                <div class="has-text-centered">
+                    <h1 class="title">My Team</h1>
+                </div>
+                <div>
+                        ${employeeCardsArray}
+                </div>
             </body>
         </html>
     `;
